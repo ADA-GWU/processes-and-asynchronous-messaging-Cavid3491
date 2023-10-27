@@ -1,0 +1,363 @@
+Microsoft Windows [Version 10.0.19045.3570]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Javid>docker --version
+Docker version 24.0.6, build ed223bc
+
+C:\Users\Javid>docker run -it --name test
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+
+C:\Users\Javid>docker run --help
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+
+Aliases:
+  docker container run, docker run
+
+Options:
+      --add-host list                  Add a custom host-to-IP mapping
+                                       (host:ip)
+      --annotation map                 Add an annotation to the container
+                                       (passed through to the OCI
+                                       runtime) (default map[])
+  -a, --attach list                    Attach to STDIN, STDOUT or STDERR
+      --blkio-weight uint16            Block IO (relative weight),
+                                       between 10 and 1000, or 0 to
+                                       disable (default 0)
+      --blkio-weight-device list       Block IO weight (relative device
+                                       weight) (default [])
+      --cap-add list                   Add Linux capabilities
+      --cap-drop list                  Drop Linux capabilities
+      --cgroup-parent string           Optional parent cgroup for the
+                                       container
+      --cgroupns string                Cgroup namespace to use
+                                       (host|private)
+                                       'host':    Run the container in
+                                       the Docker host's cgroup namespace
+                                       'private': Run the container in
+                                       its own private cgroup namespace
+                                       '':        Use the cgroup
+                                       namespace as configured by the
+                                                  default-cgroupns-mode
+                                       option on the daemon (default)
+      --cidfile string                 Write the container ID to the file
+      --cpu-period int                 Limit CPU CFS (Completely Fair
+                                       Scheduler) period
+      --cpu-quota int                  Limit CPU CFS (Completely Fair
+                                       Scheduler) quota
+      --cpu-rt-period int              Limit CPU real-time period in
+                                       microseconds
+      --cpu-rt-runtime int             Limit CPU real-time runtime in
+                                       microseconds
+  -c, --cpu-shares int                 CPU shares (relative weight)
+      --cpus decimal                   Number of CPUs
+      --cpuset-cpus string             CPUs in which to allow execution
+                                       (0-3, 0,1)
+      --cpuset-mems string             MEMs in which to allow execution
+                                       (0-3, 0,1)
+  -d, --detach                         Run container in background and
+                                       print container ID
+      --detach-keys string             Override the key sequence for
+                                       detaching a container
+      --device list                    Add a host device to the container
+      --device-cgroup-rule list        Add a rule to the cgroup allowed
+                                       devices list
+      --device-read-bps list           Limit read rate (bytes per second)
+                                       from a device (default [])
+      --device-read-iops list          Limit read rate (IO per second)
+                                       from a device (default [])
+      --device-write-bps list          Limit write rate (bytes per
+                                       second) to a device (default [])
+      --device-write-iops list         Limit write rate (IO per second)
+                                       to a device (default [])
+      --disable-content-trust          Skip image verification (default true)
+      --dns list                       Set custom DNS servers
+      --dns-option list                Set DNS options
+      --dns-search list                Set custom DNS search domains
+      --domainname string              Container NIS domain name
+      --entrypoint string              Overwrite the default ENTRYPOINT
+                                       of the image
+  -e, --env list                       Set environment variables
+      --env-file list                  Read in a file of environment variables
+      --expose list                    Expose a port or a range of ports
+      --gpus gpu-request               GPU devices to add to the
+                                       container ('all' to pass all GPUs)
+      --group-add list                 Add additional groups to join
+      --health-cmd string              Command to run to check health
+      --health-interval duration       Time between running the check
+                                       (ms|s|m|h) (default 0s)
+      --health-retries int             Consecutive failures needed to
+                                       report unhealthy
+      --health-start-period duration   Start period for the container to
+                                       initialize before starting
+                                       health-retries countdown
+                                       (ms|s|m|h) (default 0s)
+      --health-timeout duration        Maximum time to allow one check to
+                                       run (ms|s|m|h) (default 0s)
+      --help                           Print usage
+  -h, --hostname string                Container host name
+      --init                           Run an init inside the container
+                                       that forwards signals and reaps
+                                       processes
+  -i, --interactive                    Keep STDIN open even if not attached
+      --ip string                      IPv4 address (e.g., 172.30.100.104)
+      --ip6 string                     IPv6 address (e.g., 2001:db8::33)
+      --ipc string                     IPC mode to use
+      --isolation string               Container isolation technology
+      --kernel-memory bytes            Kernel memory limit
+  -l, --label list                     Set meta data on a container
+      --label-file list                Read in a line delimited file of labels
+      --link list                      Add link to another container
+      --link-local-ip list             Container IPv4/IPv6 link-local
+                                       addresses
+      --log-driver string              Logging driver for the container
+      --log-opt list                   Log driver options
+      --mac-address string             Container MAC address (e.g.,
+                                       92:d0:c6:0a:29:33)
+  -m, --memory bytes                   Memory limit
+      --memory-reservation bytes       Memory soft limit
+      --memory-swap bytes              Swap limit equal to memory plus
+                                       swap: '-1' to enable unlimited swap
+      --memory-swappiness int          Tune container memory swappiness
+                                       (0 to 100) (default -1)
+      --mount mount                    Attach a filesystem mount to the
+                                       container
+      --name string                    Assign a name to the container
+      --network network                Connect a container to a network
+      --network-alias list             Add network-scoped alias for the
+                                       container
+      --no-healthcheck                 Disable any container-specified
+                                       HEALTHCHECK
+      --oom-kill-disable               Disable OOM Killer
+      --oom-score-adj int              Tune host's OOM preferences (-1000
+                                       to 1000)
+      --pid string                     PID namespace to use
+      --pids-limit int                 Tune container pids limit (set -1
+                                       for unlimited)
+      --platform string                Set platform if server is
+                                       multi-platform capable
+      --privileged                     Give extended privileges to this
+                                       container
+  -p, --publish list                   Publish a container's port(s) to
+                                       the host
+  -P, --publish-all                    Publish all exposed ports to
+                                       random ports
+      --pull string                    Pull image before running
+                                       ("always", "missing", "never")
+                                       (default "missing")
+  -q, --quiet                          Suppress the pull output
+      --read-only                      Mount the container's root
+                                       filesystem as read only
+      --restart string                 Restart policy to apply when a
+                                       container exits (default "no")
+      --rm                             Automatically remove the container
+                                       when it exits
+      --runtime string                 Runtime to use for this container
+      --security-opt list              Security Options
+      --shm-size bytes                 Size of /dev/shm
+      --sig-proxy                      Proxy received signals to the
+                                       process (default true)
+      --stop-signal string             Signal to stop the container
+      --stop-timeout int               Timeout (in seconds) to stop a
+                                       container
+      --storage-opt list               Storage driver options for the
+                                       container
+      --sysctl map                     Sysctl options (default map[])
+      --tmpfs list                     Mount a tmpfs directory
+  -t, --tty                            Allocate a pseudo-TTY
+      --ulimit ulimit                  Ulimit options (default [])
+  -u, --user string                    Username or UID (format:
+                                       <name|uid>[:<group|gid>])
+      --userns string                  User namespace to use
+      --uts string                     UTS namespace to use
+  -v, --volume list                    Bind mount a volume
+      --volume-driver string           Optional volume driver for the
+                                       container
+      --volumes-from list              Mount volumes from the specified
+                                       container(s)
+  -w, --workdir string                 Working directory inside the container
+
+C:\Users\Javid>
+C:\Users\Javid>docker pull postgresql
+Using default tag: latest
+Error response from daemon: pull access denied for postgresql, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\Javid>docker pull postgresql
+Using default tag: latest
+Error response from daemon: pull access denied for postgresql, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\Javid>docker login
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+Username: thedevelopingprius
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+
+C:\Users\Javid>dokcer login
+'dokcer' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Javid>docker login
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+Username: thedevelopingprius
+Password:
+Login Succeeded
+
+C:\Users\Javid>docker pull postgresql
+Using default tag: latest
+Error response from daemon: pull access denied for postgresql, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\Javid>docker pull postgresql
+Using default tag: latest
+Error response from daemon: pull access denied for postgresql, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\Javid>docker pull postgres
+Using default tag: latest
+latest: Pulling from library/postgres
+a378f10b3218: Pull complete
+2ebc5690e391: Pull complete
+8fe57f734687: Pull complete
+a2ddbb09cd9a: Pull complete
+5a2499e87ab8: Pull complete
+a45f5c4adf1b: Pull complete
+178017fd978e: Pull complete
+428dff1cb77d: Pull complete
+4667364adfc4: Pull complete
+4eea1f5281a9: Pull complete
+369467411787: Pull complete
+51184495a2bc: Pull complete
+d3e246f01410: Pull complete
+Digest: sha256:3d9ed832906091d609cfd6f283e79492ace01ba15866b21d8a262e8fd1cdfb55
+Status: Downloaded newer image for postgres:latest
+docker.io/library/postgres:latest
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview postgres
+
+C:\Users\Javid>docker run -d --container -p 5432:5432 -e POSTGRES_PASSWORD = dist_pass_123 postgres
+unknown flag: --container
+See 'docker run --help'.
+
+C:\Users\Javid>docker run -d container -p 5432:5432 -e POSTGRES_PASSWORD = dist_pass_123 postgres
+Unable to find image 'container:latest' locally
+docker: Error response from daemon: pull access denied for container, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+
+C:\Users\Javid>docker run -d --name postgres_container -p 5432:5432 -e POSTGRES_PASSWORD = dist_pass_123 postgres
+docker: invalid reference format.
+See 'docker run --help'.
+
+C:\Users\Javid>docker run -d --name postgres_container -p 5432:5432 -e POSTGRES_PASSWORD = dist_pass_123 postgres
+docker: invalid reference format.
+See 'docker run --help'.
+
+C:\Users\Javid>docker run -d --name postgres_container -p 5432:5432 -e POSTGRES_PASSWORD=dist_pass_123 postgres
+68c38f9ea3952047fdfd55b3aaebbcab35148bc9c16ba61e346cc8a9859ffff1
+
+C:\Users\Javid>dokcer ps
+'dokcer' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Javid>docker ps
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS          PORTS                    NAMES
+68c38f9ea395   postgres   "docker-entrypoint.s…"   29 seconds ago   Up 27 seconds   0.0.0.0:5432->5432/tcp   postgres_container
+
+C:\Users\Javid>docker exec -it postgres_container bash
+root@68c38f9ea395:/#
+root@68c38f9ea395:/# psql -h localhost -U postgres
+psql (16.0 (Debian 16.0-1.pgdg120+1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE my_db;
+CREATE DATABASE
+postgres=# \l
+                                                      List of databases
+   Name    |  Owner   | Encoding | Locale Provider |  Collate   |   Ctype    | ICU Locale | ICU Rules |
+  Access privileges
+-----------+----------+----------+-----------------+------------+------------+------------+-----------+-----------------------
+ my_db     | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           |
+ postgres  | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           |
+ template0 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           |
+=c/postgres          +
+           |          |          |                 |            |            |            |           |
+postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           |
+=c/postgres          +
+           |          |          |                 |            |            |            |           |
+postgres=CTc/postgres
+(4 rows)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+postgres=# \c my_db;
+You are now connected to database "my_db" as user "postgres".
+my_db=# ^V^C
+my_db=#  "my_db" as user "postgres".
+my_db-# my_db=# "my_db" as user "postgres".
+my_db-# my_db=# "my_db" as user "postgres".
+my_db-# CREATE TABLE ASYNC_MESSAGES (RECORD_ID SERIAL PRIMARY KEY, SENDER_NAME VARCHAR(30), MESSAGE VARCHAR(30), SENT_TIME TIMESTAMP, RECEIVED_TIME TIMESTAMP);
+ERROR:  syntax error at or near ""my_db""
+LINE 1: "my_db" as user "postgres".
+        ^
+my_db=#
+CREATE TABLE ASYNC_MESSAGES (RECORD_ID SERIAL PRIMARY KEY, SENDER_NAME VARCHAR(30), MESSAGE VARCHAR(30), SENT_TIME TIMESTAMP, RECEIVED_TIME TIMESTAMP);
+CREATE TABLE
+my_db=# SELECT * FROM my_db;
+ERROR:  relation "my_db" does not exist
+LINE 1: SELECT * FROM my_db;
+                      ^
+my_db=# SELECT * FROM ASYNC_MESSAGES
+my_db-# ;
+ record_id | sender_name | message | sent_time | received_time
+-----------+-------------+---------+-----------+---------------
+(0 rows)
+
+my_db=#
+my_db=#
+my_db=# CREATE USER dist_user WITH PASSWORD 'dist_pass_123';
+CREATE ROLE
+my_db=# bb

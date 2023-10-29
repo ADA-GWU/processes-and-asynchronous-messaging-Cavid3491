@@ -1,67 +1,105 @@
-2023-10-27 19:36:40 The files belonging to this database system will be owned by user "postgres".
-2023-10-27 19:36:40 This user must also own the server process.
-2023-10-27 19:36:40 
-2023-10-27 19:36:40 The database cluster will be initialized with locale "en_US.utf8".
-2023-10-27 19:36:40 The default database encoding has accordingly been set to "UTF8".
-2023-10-27 19:36:40 The default text search configuration will be set to "english".
-2023-10-27 19:36:40 
-2023-10-27 19:36:40 Data page checksums are disabled.
-2023-10-27 19:36:40 
-2023-10-27 19:36:40 fixing permissions on existing directory /var/lib/postgresql/data ... ok
-2023-10-27 19:36:40 creating subdirectories ... ok
-2023-10-27 19:36:40 selecting dynamic shared memory implementation ... posix
-2023-10-27 19:36:40 selecting default max_connections ... 100
-2023-10-27 19:36:40 selecting default shared_buffers ... 128MB
-2023-10-27 19:36:40 selecting default time zone ... Etc/UTC
-2023-10-27 19:36:40 creating configuration files ... ok
-2023-10-27 19:36:41 running bootstrap script ... ok
-2023-10-27 19:36:41 performing post-bootstrap initialization ... ok
-2023-10-27 19:36:42 syncing data to disk ... ok
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 Success. You can now start the database server using:
-2023-10-27 19:36:42 
-2023-10-27 19:36:42     pg_ctl -D /var/lib/postgresql/data -l logfile start
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 waiting for server to start....2023-10-27 15:36:42.416 UTC [48] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-2023-10-27 19:36:42 2023-10-27 15:36:42.421 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-10-27 19:36:42 2023-10-27 15:36:42.433 UTC [51] LOG:  database system was shut down at 2023-10-27 15:36:41 UTC
-2023-10-27 19:36:42 2023-10-27 15:36:42.441 UTC [48] LOG:  database system is ready to accept connections
-2023-10-27 19:36:42  done
-2023-10-27 19:36:42 server started
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 waiting for server to shut down...2023-10-27 15:36:42.553 UTC [48] LOG:  received fast shutdown request
-2023-10-27 19:36:42 .2023-10-27 15:36:42.597 UTC [48] LOG:  aborting any active transactions
-2023-10-27 19:36:42 2023-10-27 15:36:42.600 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
-2023-10-27 19:36:42 2023-10-27 15:36:42.600 UTC [49] LOG:  shutting down
-2023-10-27 19:36:42 2023-10-27 15:36:42.603 UTC [49] LOG:  checkpoint starting: shutdown immediate
-2023-10-27 19:36:42 2023-10-27 15:36:42.630 UTC [49] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.005 s, total=0.030 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/14EAA88, redo lsn=0/14EAA88
-2023-10-27 19:36:42 2023-10-27 15:36:42.636 UTC [48] LOG:  database system is shut down
-2023-10-27 19:36:42  done
-2023-10-27 19:36:42 server stopped
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 PostgreSQL init process complete; ready for start up.
-2023-10-27 19:36:42 
-2023-10-27 19:36:42 initdb: warning: enabling "trust" authentication for local connections
-2023-10-27 19:36:42 initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-2023-10-27 19:36:42 2023-10-27 15:36:42.690 UTC [1] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-2023-10-27 19:36:42 2023-10-27 15:36:42.690 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2023-10-27 19:36:42 2023-10-27 15:36:42.690 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-2023-10-27 19:36:42 2023-10-27 15:36:42.705 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2023-10-27 19:36:42 2023-10-27 15:36:42.715 UTC [62] LOG:  database system was shut down at 2023-10-27 15:36:42 UTC
-2023-10-27 19:36:42 2023-10-27 15:36:42.725 UTC [1] LOG:  database system is ready to accept connections
-2023-10-27 19:41:42 2023-10-27 15:41:42.817 UTC [60] LOG:  checkpoint starting: time
-2023-10-27 19:43:20 2023-10-27 15:43:20.174 UTC [60] LOG:  checkpoint complete: wrote 972 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=97.205 s, sync=0.103 s, total=97.358 s; sync files=310, longest=0.003 s, average=0.001 s; distance=4528 kB, estimate=4528 kB; lsn=0/1956C60, redo lsn=0/1956C28
-2023-10-27 19:43:36 2023-10-27 15:43:36.559 UTC [82] ERROR:  syntax error at or near ""my_db"" at character 1
-2023-10-27 19:43:36 2023-10-27 15:43:36.559 UTC [82] STATEMENT:  "my_db" as user "postgres".
-2023-10-27 19:43:36     my_db=# "my_db" as user "postgres".
-2023-10-27 19:43:36     my_db=# "my_db" as user "postgres".
-2023-10-27 19:43:36     CREATE TABLE ASYNC_MESSAGES (RECORD_ID SERIAL PRIMARY KEY, SENDER_NAME VARCHAR(30), MESSAGE VARCHAR(30), SENT_TIME TIMESTAMP, RECEIVED_TIME TIMESTAMP);
-2023-10-27 19:44:19 2023-10-27 15:44:19.909 UTC [82] ERROR:  relation "my_db" does not exist at character 15
-2023-10-27 19:44:19 2023-10-27 15:44:19.909 UTC [82] STATEMENT:  SELECT * FROM my_db;
-2023-10-27 19:46:42 2023-10-27 15:46:42.206 UTC [60] LOG:  checkpoint starting: time
-2023-10-27 19:46:46 2023-10-27 15:46:46.837 UTC [60] LOG:  checkpoint complete: wrote 46 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.522 s, sync=0.058 s, total=4.632 s; sync files=39, longest=0.041 s, average=0.002 s; distance=155 kB, estimate=4091 kB; lsn=0/197DBF0, redo lsn=0/197DBB8
-2023-10-27 19:51:42 2023-10-27 15:51:42.935 UTC [60] LOG:  checkpoint starting: time
-2023-10-27 19:51:43 2023-10-27 15:51:43.434 UTC [60] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.406 s, sync=0.044 s, total=0.500 s; sync files=5, longest=0.042 s, average=0.009 s; distance=3 kB, estimate=3682 kB; lsn=0/197EA68, redo lsn=0/197EA30
+2023-10-29 22:39:49 The files belonging to this database system will be owned by user "postgres".
+2023-10-29 22:39:49 This user must also own the server process.
+2023-10-29 22:39:49 
+2023-10-29 22:39:49 The database cluster will be initialized with locale "en_US.utf8".
+2023-10-29 22:39:49 The default database encoding has accordingly been set to "UTF8".
+2023-10-29 22:39:49 The default text search configuration will be set to "english".
+2023-10-29 22:39:49 
+2023-10-29 22:39:49 Data page checksums are disabled.
+2023-10-29 22:39:49 
+2023-10-29 22:39:49 fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2023-10-29 22:39:49 creating subdirectories ... ok
+2023-10-29 22:39:49 selecting dynamic shared memory implementation ... posix
+2023-10-29 22:39:49 selecting default max_connections ... 100
+2023-10-29 22:39:49 selecting default shared_buffers ... 128MB
+2023-10-29 22:39:49 selecting default time zone ... Etc/UTC
+2023-10-29 22:39:49 creating configuration files ... ok
+2023-10-29 22:39:50 running bootstrap script ... ok
+2023-10-29 22:39:50 performing post-bootstrap initialization ... ok
+2023-10-29 22:39:51 syncing data to disk ... ok
+2023-10-29 22:39:51 
+2023-10-29 22:39:51 
+2023-10-29 22:39:51 Success. You can now start the database server using:
+2023-10-29 22:39:51 
+2023-10-29 22:39:51     pg_ctl -D /var/lib/postgresql/data -l logfile start
+2023-10-29 22:39:51 
+2023-10-29 22:39:51 waiting for server to start....2023-10-29 18:39:51.461 UTC [48] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2023-10-29 22:39:51 2023-10-29 18:39:51.466 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-10-29 22:39:51 2023-10-29 18:39:51.478 UTC [51] LOG:  database system was shut down at 2023-10-29 18:39:50 UTC
+2023-10-29 22:39:51 2023-10-29 18:39:51.486 UTC [48] LOG:  database system is ready to accept connections
+2023-10-29 22:39:51  done
+2023-10-29 22:39:51 server started
+2023-10-29 22:39:51 
+2023-10-29 22:39:51 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2023-10-29 22:39:51 
+2023-10-29 22:39:51 2023-10-29 18:39:51.662 UTC [48] LOG:  received fast shutdown request
+2023-10-29 22:39:51 waiting for server to shut down....2023-10-29 18:39:51.665 UTC [48] LOG:  aborting any active transactions
+2023-10-29 22:39:51 2023-10-29 18:39:51.668 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+2023-10-29 22:39:51 2023-10-29 18:39:51.668 UTC [49] LOG:  shutting down
+2023-10-29 22:39:51 2023-10-29 18:39:51.672 UTC [49] LOG:  checkpoint starting: shutdown immediate
+2023-10-29 22:39:51 2023-10-29 18:39:51.695 UTC [49] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.007 s, sync=0.003 s, total=0.027 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/14EAA88, redo lsn=0/14EAA88
+2023-10-29 22:39:51 2023-10-29 18:39:51.701 UTC [48] LOG:  database system is shut down
+2023-10-29 22:39:51  done
+2023-10-29 22:39:51 server stopped
+2023-10-29 22:39:51 initdb: warning: enabling "trust" authentication for local connections
+2023-10-29 22:39:51 initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2023-10-29 22:39:51 2023-10-29 18:39:51.800 UTC [1] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2023-10-29 22:39:51 2023-10-29 18:39:51.801 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2023-10-29 22:39:51 2023-10-29 18:39:51.801 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2023-10-29 22:39:51 2023-10-29 18:39:51.808 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-10-29 22:39:51 2023-10-29 18:39:51.818 UTC [62] LOG:  database system was shut down at 2023-10-29 18:39:51 UTC
+2023-10-29 22:39:51 2023-10-29 18:39:51.826 UTC [1] LOG:  database system is ready to accept connections
+2023-10-29 22:40:40 2023-10-29 18:40:40.913 UTC [74] FATAL:  role "dist_user_123" does not exist
+2023-10-29 22:40:46 2023-10-29 18:40:46.664 UTC [76] FATAL:  role "localhost" does not exist
+2023-10-29 22:41:17 2023-10-29 18:41:17.090 UTC [80] FATAL:  role "localhost" does not exist
+2023-10-29 22:44:51 2023-10-29 18:44:51.910 UTC [60] LOG:  checkpoint starting: time
+2023-10-29 22:44:56 2023-10-29 18:44:56.138 UTC [60] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.128 s, sync=0.050 s, total=4.229 s; sync files=11, longest=0.042 s, average=0.005 s; distance=261 kB, estimate=261 kB; lsn=0/152BEE0, redo lsn=0/152BEA8
+2023-10-29 22:47:52 2023-10-29 18:47:52.870 UTC [83] ERROR:  syntax error at or near "(" at character 29
+2023-10-29 22:47:52 2023-10-29 18:47:52.870 UTC [83] STATEMENT:  CREATE DATABASE ASYNC_IMAGES(
+2023-10-29 22:47:52     RECORD_ID SERIAL PRIMARY KEY,
+2023-10-29 22:47:52     SENDER NAME VARCHAR(30),
+2023-10-29 22:47:52     MESSAGE VARCHAR(30),
+2023-10-29 22:47:52     SENT_TIME TIMESTAMP,
+2023-10-29 22:47:52     RECEIVED_TIME TIMESTAMP);
+2023-10-29 22:48:05 2023-10-29 18:48:05.245 UTC [83] ERROR:  syntax error at or near "(" at character 30
+2023-10-29 22:48:05 2023-10-29 18:48:05.245 UTC [83] STATEMENT:  CREATE DATABASE ASYNC_IMAGES (
+2023-10-29 22:48:05     RECORD_ID SERIAL PRIMARY KEY,
+2023-10-29 22:48:05     SENDER NAME VARCHAR(30),
+2023-10-29 22:48:05     MESSAGE VARCHAR(30),
+2023-10-29 22:48:05     SENT_TIME TIMESTAMP,
+2023-10-29 22:48:05     RECEIVED_TIME TIMESTAMP);
+2023-10-29 22:48:27 2023-10-29 18:48:27.539 UTC [83] ERROR:  syntax error at or near "(" at character 32
+2023-10-29 22:48:27 2023-10-29 18:48:27.539 UTC [83] STATEMENT:  CREATE DATABASE ASYNC_MESSAGES (
+2023-10-29 22:48:27     RECORD_ID SERIAL PRIMARY KEY,
+2023-10-29 22:48:27     SENDER NAME VARCHAR(30),
+2023-10-29 22:48:27     MESSAGE VARCHAR(30),
+2023-10-29 22:48:27     SENT_TIME TIMESTAMP,
+2023-10-29 22:48:27     RECEIVED_TIME TIMESTAMP);
+2023-10-29 22:49:28 2023-10-29 18:49:28.795 UTC [100] ERROR:  syntax error at or near "(" at character 32
+2023-10-29 22:49:28 2023-10-29 18:49:28.795 UTC [100] STATEMENT:  CREATE DATABASE ASYNC_MESSAGES (
+2023-10-29 22:49:28     RECORD_ID SERIAL PRIMARY KEY,
+2023-10-29 22:49:28     SENDER NAME VARCHAR(30),
+2023-10-29 22:49:28     MESSAGE VARCHAR(30),
+2023-10-29 22:49:28     SENT_TIME TIMESTAMP,
+2023-10-29 22:49:28     RECEIVED_TIME TIMESTAMP);
+2023-10-29 22:49:43 2023-10-29 18:49:43.787 UTC [100] ERROR:  syntax error at or near "VARCHAR" at character 73
+2023-10-29 22:49:43 2023-10-29 18:49:43.787 UTC [100] STATEMENT:  CREATE TABLE ASYNC_MESSAGES (
+2023-10-29 22:49:43     RECORD_ID SERIAL PRIMARY KEY,
+2023-10-29 22:49:43     SENDER NAME VARCHAR(30),
+2023-10-29 22:49:43     MESSAGE VARCHAR(30),
+2023-10-29 22:49:43     SENT_TIME TIMESTAMP,
+2023-10-29 22:49:43     RECEIVED_TIME TIMESTAMP);
+2023-10-29 22:49:51 2023-10-29 18:49:51.239 UTC [60] LOG:  checkpoint starting: time
+2023-10-29 22:51:24 2023-10-29 18:51:24.720 UTC [60] LOG:  checkpoint complete: wrote 929 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=93.301 s, sync=0.130 s, total=93.482 s; sync files=303, longest=0.007 s, average=0.001 s; distance=4267 kB, estimate=4267 kB; lsn=0/197DB78, redo lsn=0/1956D10
+2023-10-29 22:53:38 2023-10-29 18:53:38.996 UTC [100] ERROR:  syntax error at or near "/" at character 1
+2023-10-29 22:53:38 2023-10-29 18:53:38.996 UTC [100] STATEMENT:  /L
+2023-10-29 22:53:38     CREATE USER dist_user WITH PASSWORD 'dist_pass_123';
+2023-10-29 22:53:48 2023-10-29 18:53:48.113 UTC [116] FATAL:  role "root" does not exist
+2023-10-29 22:54:51 2023-10-29 18:54:51.723 UTC [60] LOG:  checkpoint starting: time
+2023-10-29 22:54:53 2023-10-29 18:54:53.293 UTC [60] LOG:  checkpoint complete: wrote 16 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.511 s, sync=0.049 s, total=1.571 s; sync files=15, longest=0.042 s, average=0.004 s; distance=159 kB, estimate=3856 kB; lsn=0/197E9F0, redo lsn=0/197E9B8
+2023-10-29 23:39:05 2023-10-29 19:39:05.293 UTC [217] FATAL:  role "root" does not exist
+2023-10-29 23:39:26 2023-10-29 19:39:26.946 UTC [220] FATAL:  database "dist_user" does not exist
+2023-10-29 23:39:46 2023-10-29 19:39:46.821 UTC [223] FATAL:  role "test6" does not exist
+2023-10-29 22:39:51 
+2023-10-29 22:39:51 PostgreSQL init process complete; ready for start up.
+2023-10-29 22:39:51
